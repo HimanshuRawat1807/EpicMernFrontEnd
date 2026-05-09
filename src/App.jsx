@@ -24,7 +24,7 @@ export default function App() {
       try {
         setLoading(true);
 
-        const res = await fetch(`api/users`);
+        const res = await fetch(`${API}/api/users`);
 
         const data = await res.json();
 
@@ -103,7 +103,7 @@ const handleSubmit = async (e) => {
   if (!validate()) return;
 
   try {
-    const res = await fetch(`api/users`, {
+    const res = await fetch(`${API}/api/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
